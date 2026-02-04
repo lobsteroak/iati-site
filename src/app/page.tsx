@@ -17,7 +17,7 @@ export default function Home() {
             </h1>
             <p className="text-lg lg:text-xl text-muted leading-relaxed mb-10 max-w-2xl">
               Identificamos os processos manuais do seu negócio e
-              transformamo-los em workflows automáticos. Poupe tempo, reduza
+              convertemos em workflows automáticos. Poupe tempo, reduza
               erros e deixe a sua equipa focar-se no que realmente importa.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">

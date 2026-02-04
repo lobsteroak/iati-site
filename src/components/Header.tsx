@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 export function Header() {
@@ -20,9 +21,9 @@ export function Header() {
           {/* Logo */}
           <Link
             href="/"
-            className="text-xl lg:text-2xl font-bold tracking-tight"
+            className="flex items-center"
           >
-            IATI
+            <Image src="/favicon.ico" alt="IATI" width={40} height={40} />
           </Link>
 
           {/* Desktop Navigation */}

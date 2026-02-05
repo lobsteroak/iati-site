@@ -10,6 +10,7 @@ import { AnimatedPills } from "@/components/AnimatedPills";
 import { StatsCounter } from "@/components/StatsCounter";
 import { TestimonialSlider } from "@/components/TestimonialSlider";
 import { FloatingElements } from "@/components/FloatingElements";
+import { DashboardCard } from "@/components/DashboardCard";
 
 export default function Home() {
   const testimonials = [
@@ -246,6 +247,11 @@ export default function Home() {
               { value: 3, suffix: "x", label: "Aumento médio de produtividade" },
             ]}
           />
+
+          {/* Dashboard Preview */}
+          <div className="mt-20">
+            <DashboardCard />
+          </div>
         </div>
       </section>
 

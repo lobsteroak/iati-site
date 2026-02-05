@@ -134,7 +134,7 @@ export function DashboardCard() {
                   <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                 </svg>
               </div>
-              <span className="text-gray-900 font-medium">limoeiro420</span>
+              <span className="text-gray-900 font-medium">Cliente</span>
               {/* Verified badge */}
               <svg className="w-5 h-5 text-blue-500" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />

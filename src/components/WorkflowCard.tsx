@@ -117,8 +117,6 @@ export function WorkflowCard() {
               ))}
             </div>
 
-            {/* Connection lines */}
-            <div className="absolute left-[52px] top-[140px] w-[2px] h-[180px] bg-gradient-to-b from-gray-900 via-gray-300 to-gray-200 rounded-full hidden lg:block" />
           </div>
 
           {/* Footer stats */}

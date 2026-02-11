@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { CalEmbed } from "@/components/CalEmbed";
 
 export const metadata: Metadata = {
   title: "Contacto | IATI - Automatização Inteligente",
@@ -40,64 +41,9 @@ export default function ContactoPage() {
                   duração de aproximadamente 30 minutos.
                 </p>
 
-                {/* Cal.com Embed Placeholder */}
-                <div className="bg-white rounded-2xl border border-border p-8 min-h-[500px] flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-neutral-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                      <svg
-                        className="w-8 h-8 text-muted"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                        />
-                      </svg>
-                    </div>
-                    <h3 className="text-lg font-semibold mb-2">
-                      Calendário de Marcações
-                    </h3>
-                    <p className="text-muted text-sm mb-6">
-                      O widget de agendamento Cal.com será integrado aqui.
-                    </p>
-                    {/*
-                      Para integrar o Cal.com, adicione o script:
-                      <Cal calLink="seu-username/reuniao" />
-
-                      Ou use o iframe:
-                      <iframe
-                        src="https://cal.com/seu-username/reuniao?embed=true"
-                        width="100%"
-                        height="600"
-                        frameBorder="0"
-                      />
-                    */}
-                    <a
-                      href="https://cal.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-muted transition-colors"
-                    >
-                      Abrir calendário externo
-                      <svg
-                        className="w-4 h-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                        />
-                      </svg>
-                    </a>
-                  </div>
+                {/* Cal.com Embed */}
+                <div className="bg-white rounded-2xl border border-border min-h-[600px] overflow-hidden">
+                  <CalEmbed />
                 </div>
               </div>
             </div>

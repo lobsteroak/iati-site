@@ -1,4 +1,4 @@
-import { Button } from "@/components/Button";
+import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -375,13 +375,12 @@ export default function ServicosPage() {
               Agende uma reunião gratuita. Sem compromisso, vamos analisar os
               seus processos e identificar oportunidades de automatização.
             </p>
-            <Button
+            <Link
               href="/contacto"
-              size="lg"
-              className="bg-white text-foreground hover:bg-white/90"
+              className="inline-flex items-center justify-center px-8 py-4 text-base font-medium rounded-full bg-white text-gray-900 hover:bg-white/90 transition-all duration-200"
             >
               Agendar Reunião Gratuita
-            </Button>
+            </Link>
           </div>
         </div>
       </section>

@@ -96,12 +96,12 @@ export default function ContactoPage() {
                     <div>
                       <h3 className="font-semibold mb-1">LinkedIn</h3>
                       <a
-                        href="https://linkedin.com/company/iati"
+                        href="https://linkedin.com/company/iaty"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-muted hover:text-foreground transition-colors"
                       >
-                        /company/iati
+                        /company/iaty
                       </a>
                     </div>
                   </div>

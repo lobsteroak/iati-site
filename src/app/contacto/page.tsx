@@ -42,7 +42,7 @@ export default function ContactoPage() {
                 </p>
 
                 {/* Cal.com Embed */}
-                <div className="bg-white rounded-2xl border border-border h-[500px] overflow-hidden">
+                <div className="bg-white rounded-2xl border border-border h-[700px] overflow-hidden">
                   <CalEmbed />
                 </div>
               </div>

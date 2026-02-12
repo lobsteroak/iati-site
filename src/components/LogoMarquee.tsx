@@ -41,7 +41,7 @@ export function LogoMarquee() {
         </motion.div>
       </div>
       <p className="text-center text-sm text-muted mt-6">
-        Empresas que confiam na IATI
+        Empresas que confiam na IATY
       </p>
     </div>
   );

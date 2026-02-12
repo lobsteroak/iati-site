@@ -134,12 +134,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!post) {
     return {
-      title: "Artigo não encontrado | IATI",
+      title: "Artigo não encontrado | IATY",
     };
   }
 
   return {
-    title: `${post.title} | IATI Blog`,
+    title: `${post.title} | IATY Blog`,
     description: post.excerpt,
   };
 }

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Blog | IATI - Automatização Inteligente",
+  title: "Blog | IATY - Automatização Inteligente",
   description:
     "Artigos sobre automatização, produtividade e transformação digital para PME portuguesas.",
 };

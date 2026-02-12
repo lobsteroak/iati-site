@@ -16,7 +16,7 @@ import { WorkflowCard } from "@/components/WorkflowCard";
 export default function Home() {
   const testimonials = [
     {
-      quote: "A IATI transformou completamente a nossa operação. O que antes levava horas agora é feito automaticamente em segundos.",
+      quote: "A IATY transformou completamente a nossa operação. O que antes levava horas agora é feito automaticamente em segundos.",
       author: "Maria Santos",
       role: "CEO",
       company: "TechStart Portugal",
@@ -28,7 +28,7 @@ export default function Home() {
       company: "LogiPrime",
     },
     {
-      quote: "A equipa da IATI percebeu o nosso negócio melhor do que nós próprios. Identificaram oportunidades que nunca tínhamos considerado.",
+      quote: "A equipa da IATY percebeu o nosso negócio melhor do que nós próprios. Identificaram oportunidades que nunca tínhamos considerado.",
       author: "Ana Costa",
       role: "Fundadora",
       company: "Retail Plus",

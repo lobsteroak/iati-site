@@ -11,7 +11,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "IATI | Automatização Inteligente para o seu Negócio",
+  title: "IATY | Automatização Inteligente para o seu Negócio",
   description:
     "Identificamos e automatizamos os processos repetitivos do seu negócio. Poupe tempo, reduza custos e aumente a produtividade com workflows inteligentes.",
   keywords: [

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Serviços | IATI - Automatização Inteligente",
+  title: "Serviços | IATY - Automatização Inteligente",
   description:
     "Descubra os nossos serviços de automatização: análise de processos, implementação de workflows e suporte contínuo para o seu negócio.",
 };

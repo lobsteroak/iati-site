@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
+import { Logo } from "./Logo";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,7 +23,7 @@ export function Header() {
             href="/"
             className="flex items-center"
           >
-            <Image src="/favicon.ico" alt="IATI" width={40} height={40} />
+            <Logo className="w-10 h-10 text-foreground" />
           </Link>
 
           {/* Desktop Navigation */}

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Logo } from "./Logo";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -25,8 +26,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link href="/" className="text-2xl font-bold tracking-tight">
-              IATI
+            <Link href="/" className="flex items-center">
+              <Logo className="w-12 h-12 text-white" />
             </Link>
             <p className="mt-4 text-white/60 text-sm leading-relaxed">
               Identificamos e automatizamos os processos repetitivos do seu
@@ -100,7 +101,7 @@ export function Footer() {
             </p>
             <div className="flex items-center gap-6">
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/company/iaty"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/40 hover:text-white transition-colors duration-200"

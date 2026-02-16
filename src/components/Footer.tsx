@@ -27,7 +27,7 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center">
-              <Logo className="w-12 h-12 text-white" />
+              <Logo className="w-16 h-16 text-white" />
             </Link>
             <p className="mt-4 text-white/60 text-sm leading-relaxed">
               Identificamos e automatizamos os processos repetitivos do seu

@@ -23,7 +23,7 @@ export function Header() {
             href="/"
             className="flex items-center"
           >
-            <Logo className="w-10 h-10 text-foreground" />
+            <Logo className="w-14 h-14 text-foreground" />
           </Link>
 
           {/* Desktop Navigation */}

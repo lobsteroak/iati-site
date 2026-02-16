@@ -21,9 +21,9 @@ export default function ServicosPage() {
               Automatização à medida do seu negócio
             </h1>
             <p className="text-lg lg:text-xl text-muted leading-relaxed">
-              Desde a identificação de oportunidades até à implementação e
-              suporte contínuo. Tudo o que precisa para transformar processos
-              manuais em workflows automáticos.
+              Desde a identificação de oportunidades até à implementação com
+              tecnologia proprietária. O <strong>IATY Engine</strong> é o nosso motor de
+              automação que transforma processos manuais em workflows de alta performance.
             </p>
           </div>
         </div>
@@ -124,11 +124,11 @@ export default function ServicosPage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold mb-2">
-                  Desenvolvimento personalizado
+                  Powered by IATY Engine
                 </h3>
                 <p className="text-muted text-sm">
-                  Cada workflow é construído à medida, integrando com os
-                  sistemas que já utiliza.
+                  Os seus workflows correm na nossa tecnologia proprietária,
+                  garantindo performance, fiabilidade e controlo total.
                 </p>
               </div>
               <div className="order-1 lg:order-2">
@@ -139,13 +139,13 @@ export default function ServicosPage() {
                   Implementação de Workflows
                 </h2>
                 <p className="text-muted leading-relaxed mb-6">
-                  Desenvolvemos e implementamos os workflows aprovados.
-                  Trabalhamos de forma iterativa, com entregas incrementais para
-                  garantir que tudo funciona como esperado.
+                  Desenvolvemos e implementamos os workflows através do IATY Engine,
+                  a nossa tecnologia proprietária. Trabalhamos de forma iterativa,
+                  com entregas incrementais para garantir que tudo funciona como esperado.
                 </p>
                 <ul className="space-y-3">
                   {[
-                    "Desenvolvimento de workflows personalizados",
+                    "Execução através do IATY Engine, o nosso motor proprietário",
                     "Integração com sistemas existentes (ERP, CRM, etc.)",
                     "Testes rigorosos antes de ir para produção",
                     "Documentação completa de cada automatização",

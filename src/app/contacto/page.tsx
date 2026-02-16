@@ -33,8 +33,8 @@ export default function ContactoPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-12 lg:gap-20">
             {/* Calendar Embed */}
-            <div className="lg:col-span-2">
-              <div className="bg-neutral-50 rounded-3xl p-8 lg:p-12">
+            <div className="lg:col-span-2 order-2 lg:order-1">
+              <div className="bg-neutral-50 rounded-3xl p-6 md:p-8 lg:p-12">
                 <h2 className="text-2xl font-bold mb-6">Agendar Reunião</h2>
                 <p className="text-muted mb-8">
                   Escolha o horário que lhe for mais conveniente. A reunião terá
@@ -42,14 +42,14 @@ export default function ContactoPage() {
                 </p>
 
                 {/* Cal.com Embed */}
-                <div className="bg-white rounded-2xl border border-border h-[700px] overflow-hidden">
+                <div className="bg-white rounded-2xl border border-border h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden">
                   <CalEmbed />
                 </div>
               </div>
             </div>
 
             {/* Contact Info */}
-            <div className="space-y-8">
+            <div className="space-y-6 lg:space-y-8 order-1 lg:order-2">
               <div>
                 <h2 className="text-xl font-bold mb-6">
                   Outras formas de contacto

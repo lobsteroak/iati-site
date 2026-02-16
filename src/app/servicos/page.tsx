@@ -23,7 +23,7 @@ export default function ServicosPage() {
                 automação que transforma processos manuais em workflows de alta performance.
               </p>
             </div>
-            <div className="hidden lg:block">
+            <div className="lg:block">
               <IATYEngineCard />
             </div>
           </div>
@@ -74,10 +74,10 @@ export default function ServicosPage() {
                   ))}
                 </ul>
               </div>
-              <div className="bg-white rounded-3xl p-12 border border-border">
-                <div className="w-16 h-16 bg-neutral-100 rounded-2xl flex items-center justify-center mb-6">
+              <div className="bg-white rounded-3xl p-8 lg:p-12 border border-border">
+                <div className="w-14 h-14 lg:w-16 lg:h-16 bg-neutral-100 rounded-2xl flex items-center justify-center mb-6">
                   <svg
-                    className="w-8 h-8 text-foreground"
+                    className="w-7 h-7 lg:w-8 lg:h-8 text-foreground"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -90,7 +90,7 @@ export default function ServicosPage() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">
+                <h3 className="text-lg lg:text-xl font-semibold mb-2">
                   Entendemos antes de agir
                 </h3>
                 <p className="text-muted text-sm">
@@ -102,10 +102,10 @@ export default function ServicosPage() {
 
             {/* Service 2 */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="order-2 lg:order-1 bg-white rounded-3xl p-12 border border-border">
-                <div className="w-16 h-16 bg-neutral-100 rounded-2xl flex items-center justify-center mb-6">
+              <div className="order-2 lg:order-1 bg-white rounded-3xl p-8 lg:p-12 border border-border">
+                <div className="w-14 h-14 lg:w-16 lg:h-16 bg-neutral-100 rounded-2xl flex items-center justify-center mb-6">
                   <svg
-                    className="w-8 h-8 text-foreground"
+                    className="w-7 h-7 lg:w-8 lg:h-8 text-foreground"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -124,7 +124,7 @@ export default function ServicosPage() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">
+                <h3 className="text-lg lg:text-xl font-semibold mb-2">
                   Powered by IATY Engine
                 </h3>
                 <p className="text-muted text-sm">
@@ -212,10 +212,10 @@ export default function ServicosPage() {
                   ))}
                 </ul>
               </div>
-              <div className="bg-white rounded-3xl p-12 border border-border">
-                <div className="w-16 h-16 bg-neutral-100 rounded-2xl flex items-center justify-center mb-6">
+              <div className="bg-white rounded-3xl p-8 lg:p-12 border border-border">
+                <div className="w-14 h-14 lg:w-16 lg:h-16 bg-neutral-100 rounded-2xl flex items-center justify-center mb-6">
                   <svg
-                    className="w-8 h-8 text-foreground"
+                    className="w-7 h-7 lg:w-8 lg:h-8 text-foreground"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -228,7 +228,7 @@ export default function ServicosPage() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">
+                <h3 className="text-lg lg:text-xl font-semibold mb-2">
                   Parceiro a longo prazo
                 </h3>
                 <p className="text-muted text-sm">
@@ -368,7 +368,7 @@ export default function ServicosPage() {
       {/* CTA */}
       <section className="py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="bg-foreground rounded-3xl p-12 lg:p-20 text-center">
+          <div className="bg-foreground rounded-3xl p-8 md:p-12 lg:p-20 text-center">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white mb-6">
               Vamos falar sobre o seu negócio?
             </h2>

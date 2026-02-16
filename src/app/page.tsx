@@ -83,7 +83,7 @@ export default function Home() {
                 </div>
               </AnimatedSection>
             </div>
-            <div className="hidden lg:block">
+            <div className="mt-8 lg:mt-0">
               <DashboardCard />
             </div>
           </div>
@@ -204,7 +204,7 @@ export default function Home() {
                 ))}
               </StaggerContainer>
             </AnimatedSection>
-            <div className="lg:min-h-[500px]">
+            <div className="min-h-[400px] lg:min-h-[500px] mt-8 lg:mt-0">
               <WorkflowCard />
             </div>
           </div>
@@ -385,7 +385,7 @@ export default function Home() {
       {/* CTA Section */}
       <AnimatedSection className="py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="bg-foreground rounded-3xl p-12 lg:p-20 text-center relative overflow-hidden">
+          <div className="bg-foreground rounded-3xl p-8 md:p-12 lg:p-20 text-center relative overflow-hidden">
             {/* Subtle gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
 

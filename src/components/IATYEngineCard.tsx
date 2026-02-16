@@ -60,7 +60,7 @@ export function IATYEngineCard() {
       {/* Outer container - light theme */}
       <div className="rounded-3xl bg-gradient-to-b from-gray-200 to-gray-300 p-[1px] shadow-2xl shadow-gray-400/30 h-full">
         {/* Main card - light theme */}
-        <div className="rounded-3xl bg-gradient-to-b from-white to-gray-50 p-6 lg:p-8 h-full flex flex-col min-h-[400px]">
+        <div className="rounded-3xl bg-gradient-to-b from-white to-gray-50 p-4 md:p-6 lg:p-8 h-full flex flex-col min-h-[350px] md:min-h-[400px]">
           {/* Header */}
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">

@@ -90,6 +90,15 @@ export function IATYEngineCard() {
                     <feMergeNode in="SourceGraphic" />
                   </feMerge>
                 </filter>
+                <filter id="blueGlow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="8" result="blur" />
+                  <feFlood floodColor="#3b82f6" floodOpacity="0.3" result="color" />
+                  <feComposite in="color" in2="blur" operator="in" result="shadow" />
+                  <feMerge>
+                    <feMergeNode in="shadow" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
                 <linearGradient id="chipGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                   <stop offset="0%" stopColor="#1f2937" />
                   <stop offset="50%" stopColor="#111827" />
@@ -221,7 +230,7 @@ export function IATYEngineCard() {
               ))}
 
               {/* Central chip */}
-              <g>
+              <g filter="url(#blueGlow)">
                 {/* Chip shadow */}
                 <rect
                   x="82"

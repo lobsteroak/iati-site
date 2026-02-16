@@ -90,12 +90,21 @@ export function IATYEngineCard() {
                     <feMergeNode in="SourceGraphic" />
                   </feMerge>
                 </filter>
-                <filter id="blueGlow" x="-50%" y="-50%" width="200%" height="200%">
-                  <feGaussianBlur stdDeviation="8" result="blur" />
-                  <feFlood floodColor="#3b82f6" floodOpacity="0.3" result="color" />
-                  <feComposite in="color" in2="blur" operator="in" result="shadow" />
+                <filter id="blueGlow" x="-100%" y="-100%" width="300%" height="300%">
+                  {/* Multiple blur layers for mega beam effect */}
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="25" result="blur1" />
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="15" result="blur2" />
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur3" />
+                  <feFlood floodColor="#3b82f6" floodOpacity="0.7" result="color1" />
+                  <feFlood floodColor="#60a5fa" floodOpacity="0.5" result="color2" />
+                  <feFlood floodColor="#93c5fd" floodOpacity="0.4" result="color3" />
+                  <feComposite in="color1" in2="blur1" operator="in" result="shadow1" />
+                  <feComposite in="color2" in2="blur2" operator="in" result="shadow2" />
+                  <feComposite in="color3" in2="blur3" operator="in" result="shadow3" />
                   <feMerge>
-                    <feMergeNode in="shadow" />
+                    <feMergeNode in="shadow1" />
+                    <feMergeNode in="shadow2" />
+                    <feMergeNode in="shadow3" />
                     <feMergeNode in="SourceGraphic" />
                   </feMerge>
                 </filter>

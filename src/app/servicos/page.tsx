@@ -6,21 +6,26 @@ import { IATYEngineCard } from "@/components/IATYEngineCard";
 export default function ServicosPage() {
   return (
     <>
-      {/* Hero */}
+      {/* Hero with IATY Engine */}
       <section className="pt-32 lg:pt-40 pb-20 lg:pb-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="text-sm font-medium text-muted uppercase tracking-wider mb-4">
-              Serviços
-            </p>
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1] mb-6">
-              Automatização à medida do seu negócio
-            </h1>
-            <p className="text-lg lg:text-xl text-muted leading-relaxed">
-              Desde a identificação de oportunidades até à implementação com
-              tecnologia proprietária. O <strong>IATY Engine</strong> é o nosso motor de
-              automação que transforma processos manuais em workflows de alta performance.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="max-w-xl">
+              <p className="text-sm font-medium text-muted uppercase tracking-wider mb-4">
+                Serviços
+              </p>
+              <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1] mb-6">
+                Automatização à medida do seu negócio
+              </h1>
+              <p className="text-lg lg:text-xl text-muted leading-relaxed">
+                Desde a identificação de oportunidades até à implementação com
+                tecnologia proprietária. O <strong>IATY Engine</strong> é o nosso motor de
+                automação que transforma processos manuais em workflows de alta performance.
+              </p>
+            </div>
+            <div className="hidden lg:block">
+              <IATYEngineCard />
+            </div>
           </div>
         </div>
       </section>
@@ -97,8 +102,35 @@ export default function ServicosPage() {
 
             {/* Service 2 */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="order-2 lg:order-1">
-                <IATYEngineCard />
+              <div className="order-2 lg:order-1 bg-white rounded-3xl p-12 border border-border">
+                <div className="w-16 h-16 bg-neutral-100 rounded-2xl flex items-center justify-center mb-6">
+                  <svg
+                    className="w-8 h-8 text-foreground"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1.5}
+                      d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1.5}
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold mb-2">
+                  Powered by IATY Engine
+                </h3>
+                <p className="text-muted text-sm">
+                  Os seus workflows correm na nossa tecnologia proprietária,
+                  garantindo performance, fiabilidade e controlo total.
+                </p>
               </div>
               <div className="order-1 lg:order-2">
                 <span className="text-sm font-medium text-muted uppercase tracking-wider">

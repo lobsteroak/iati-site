@@ -19,7 +19,7 @@ export default function ServicosPage() {
               </h1>
               <p className="text-lg lg:text-xl text-muted leading-relaxed">
                 Desde a identificação de oportunidades até à implementação com
-                tecnologia proprietária. O <strong>IATY Engine</strong> é o nosso motor de
+                tecnologia proprietária. O <strong>iaty Engine</strong> é o nosso motor de
                 automação que transforma processos manuais em workflows de alta performance.
               </p>
             </div>
@@ -125,7 +125,7 @@ export default function ServicosPage() {
                   </svg>
                 </div>
                 <h3 className="text-lg lg:text-xl font-semibold mb-2">
-                  Powered by IATY Engine
+                  Powered by iaty Engine
                 </h3>
                 <p className="text-muted text-sm">
                   Os seus workflows correm na nossa tecnologia proprietária,
@@ -140,13 +140,13 @@ export default function ServicosPage() {
                   Implementação de Workflows
                 </h2>
                 <p className="text-muted leading-relaxed mb-6">
-                  Desenvolvemos e implementamos os workflows através do IATY Engine,
+                  Desenvolvemos e implementamos os workflows através do iaty Engine,
                   a nossa tecnologia proprietária. Trabalhamos de forma iterativa,
                   com entregas incrementais para garantir que tudo funciona como esperado.
                 </p>
                 <ul className="space-y-3">
                   {[
-                    "Execução através do IATY Engine, o nosso motor proprietário",
+                    "Execução através do iaty Engine, o nosso motor proprietário",
                     "Integração com sistemas existentes (ERP, CRM, etc.)",
                     "Testes rigorosos antes de ir para produção",
                     "Documentação completa de cada automatização",

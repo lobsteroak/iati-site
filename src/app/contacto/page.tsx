@@ -38,7 +38,7 @@ export default function ContactoPage() {
                 <h2 className="text-2xl font-bold mb-6">Agendar Reunião</h2>
                 <p className="text-muted mb-8">
                   Escolha o horário que lhe for mais conveniente. A reunião terá
-                  duração de aproximadamente 30 minutos.
+                  duração de aproximadamente 15 minutos.
                 </p>
 
                 {/* Cal.com Embed */}
@@ -75,10 +75,10 @@ export default function ContactoPage() {
                     <div>
                       <h3 className="font-semibold mb-1">Email</h3>
                       <a
-                        href="mailto:info@iati.pt"
+                        href="mailto:info@iaty.pt"
                         className="text-muted hover:text-foreground transition-colors"
                       >
-                        info@iati.pt
+                        info@iaty.pt
                       </a>
                     </div>
                   </div>

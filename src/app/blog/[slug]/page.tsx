@@ -19,7 +19,7 @@ const posts: Record<
     title: "O que é automatização de processos e como pode ajudar o seu negócio",
     excerpt:
       "Descubra como a automatização de processos pode transformar a forma como o seu negócio opera, poupando tempo e reduzindo erros.",
-    date: "2024-02-01",
+    date: "2026-02-12",
     category: "Guias",
     readTime: "5 min",
     content: `
@@ -78,7 +78,7 @@ A automatização de processos não é apenas para grandes empresas. Com as ferr
     title: "5 sinais de que o seu negócio precisa de automatização",
     excerpt:
       "Está a gastar demasiado tempo em tarefas repetitivas? Conheça os sinais que indicam que está na altura de automatizar.",
-    date: "2024-01-25",
+    date: "2026-02-03",
     category: "Produtividade",
     readTime: "4 min",
     content: `

@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import { getAllPosts, formatDate } from "@/lib/blog";
 
 export const metadata: Metadata = {
   title: "Blog | iaty - Automatização Inteligente",
@@ -7,55 +8,9 @@ export const metadata: Metadata = {
     "Artigos sobre automatização, produtividade e transformação digital para PME portuguesas.",
 };
 
-// This would typically come from a CMS or MDX files
-const posts = [
-  {
-    slug: "o-que-e-automatizacao-de-processos",
-    title: "O que é automatização de processos e como pode ajudar o seu negócio",
-    excerpt:
-      "Descubra como a automatização de processos pode transformar a forma como o seu negócio opera, poupando tempo e reduzindo erros.",
-    date: "2026-02-12",
-    category: "Guias",
-    readTime: "5 min",
-  },
-  {
-    slug: "5-sinais-precisa-automatizacao",
-    title: "5 sinais de que o seu negócio precisa de automatização",
-    excerpt:
-      "Está a gastar demasiado tempo em tarefas repetitivas? Conheça os sinais que indicam que está na altura de automatizar.",
-    date: "2026-02-03",
-    category: "Produtividade",
-    readTime: "4 min",
-  },
-  {
-    slug: "automatizacao-restaurantes",
-    title: "Automatização para restaurantes: um guia prático",
-    excerpt:
-      "Da gestão de menus à integração com plataformas de delivery, descubra como automatizar os processos do seu restaurante.",
-    date: "2026-01-22",
-    category: "Indústrias",
-    readTime: "7 min",
-  },
-  {
-    slug: "roi-automatizacao-como-calcular",
-    title: "Como calcular o ROI da automatização no seu negócio",
-    excerpt:
-      "Aprenda a medir o retorno do investimento em automatização e a justificar o projeto internamente.",
-    date: "2026-01-09",
-    category: "Guias",
-    readTime: "6 min",
-  },
-];
-
-function formatDate(dateString: string) {
-  return new Date(dateString).toLocaleDateString("pt-PT", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
-}
-
 export default function BlogPage() {
+  const posts = getAllPosts();
+
   return (
     <>
       {/* Hero */}

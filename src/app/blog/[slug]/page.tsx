@@ -30,6 +30,43 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+function renderTable(lines: string[]): React.ReactNode {
+  const rows = lines
+    .filter((l) => !l.match(/^\|\s*-+/)) // remove separator row (| --- | --- |)
+    .map((l) =>
+      l.split("|").filter((cell) => cell.trim() !== "").map((cell) => cell.trim())
+    );
+  if (rows.length === 0) return null;
+  const header = rows[0];
+  const body = rows.slice(1);
+  return (
+    <div className="overflow-x-auto my-8">
+      <table className="w-full text-sm text-left border-collapse">
+        <thead>
+          <tr className="border-b border-neutral-200">
+            {header.map((cell, i) => (
+              <th key={i} className="py-3 px-4 font-semibold text-foreground">
+                {cell}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {body.map((row, i) => (
+            <tr key={i} className="border-b border-neutral-100">
+              {row.map((cell, j) => (
+                <td key={j} className="py-3 px-4 text-muted">
+                  {cell}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
 function renderInlineMarkdown(text: string): React.ReactNode {
   // Split by bold, links, and inline images
   const parts = text.split(/(\*\*.*?\*\*|\[.*?\]\(.*?\))/g);
@@ -128,78 +165,53 @@ export default async function BlogPostPage({ params }: Props) {
       <section className="pb-20 lg:pb-32">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
           <article className="prose prose-neutral max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-p:text-muted prose-p:leading-relaxed prose-li:text-muted prose-strong:text-foreground prose-strong:font-semibold">
-            {post.content_markdown.split("\n").map((paragraph, index) => {
-              if (paragraph.startsWith("## ")) {
-                return (
-                  <h2 key={index} className="text-2xl font-bold mt-12 mb-4">
-                    {paragraph.replace("## ", "")}
-                  </h2>
-                );
-              }
-              if (paragraph.startsWith("### ")) {
-                return (
-                  <h3 key={index} className="text-xl font-bold mt-8 mb-3">
-                    {paragraph.replace("### ", "")}
-                  </h3>
-                );
-              }
-              if (/^!\[.*?\]\(.*?\)/.test(paragraph)) {
-                const match = paragraph.match(/^!\[(.*?)\]\((.*?)\)/);
-                if (match) {
-                  return (
-                    <img
-                      key={index}
-                      src={match[2]}
-                      alt={match[1]}
-                      className="w-full rounded-xl my-8"
-                    />
-                  );
+            {(() => {
+              const lines = post.content_markdown.split("\n");
+              const elements: React.ReactNode[] = [];
+              let i = 0;
+              while (i < lines.length) {
+                const line = lines[i];
+
+                // Table block
+                if (line.trimStart().startsWith("|")) {
+                  const tableLines: string[] = [];
+                  while (i < lines.length && lines[i].trimStart().startsWith("|")) {
+                    tableLines.push(lines[i]);
+                    i++;
+                  }
+                  elements.push(<React.Fragment key={`table-${i}`}>{renderTable(tableLines)}</React.Fragment>);
+                  continue;
+                }
+
+                i++;
+
+                if (line.startsWith("## ")) {
+                  elements.push(<h2 key={i} className="text-2xl font-bold mt-12 mb-4">{line.replace("## ", "")}</h2>);
+                } else if (line.startsWith("### ")) {
+                  elements.push(<h3 key={i} className="text-xl font-bold mt-8 mb-3">{line.replace("### ", "")}</h3>);
+                } else if (/^!\[.*?\]\(.*?\)/.test(line)) {
+                  const match = line.match(/^!\[(.*?)\]\((.*?)\)/);
+                  if (match) {
+                    elements.push(<img key={i} src={match[2]} alt={match[1]} className="w-full rounded-xl my-8" />);
+                  }
+                } else if (line.startsWith("> ")) {
+                  elements.push(<blockquote key={i} className="border-l-4 border-neutral-300 pl-4 my-6 italic text-muted">{line.replace("> ", "")}</blockquote>);
+                } else if (line.startsWith("*   ")) {
+                  elements.push(<li key={i} className="text-muted ml-4">{renderInlineMarkdown(line.replace("*   ", ""))}</li>);
+                } else if (line.startsWith("- ")) {
+                  elements.push(<li key={i} className="text-muted ml-4">{renderInlineMarkdown(line.replace("- ", ""))}</li>);
+                } else if (/^\d+\.\s/.test(line)) {
+                  elements.push(<li key={i} className="text-muted ml-4 list-decimal">{renderInlineMarkdown(line.replace(/^\d+\.\s/, ""))}</li>);
+                } else if (line.startsWith("**") && line.endsWith("**")) {
+                  elements.push(<p key={i} className="font-semibold text-foreground">{line.replace(/\*\*/g, "")}</p>);
+                } else if (line.trim() === "") {
+                  // skip empty lines
+                } else {
+                  elements.push(<p key={i} className="text-muted leading-relaxed mb-4">{renderInlineMarkdown(line)}</p>);
                 }
               }
-              if (paragraph.startsWith("> ")) {
-                return (
-                  <blockquote key={index} className="border-l-4 border-neutral-300 pl-4 my-6 italic text-muted">
-                    {paragraph.replace("> ", "")}
-                  </blockquote>
-                );
-              }
-              if (paragraph.startsWith("*   ")) {
-                return (
-                  <li key={index} className="text-muted ml-4">
-                    {renderInlineMarkdown(paragraph.replace("*   ", ""))}
-                  </li>
-                );
-              }
-              if (paragraph.startsWith("- ")) {
-                return (
-                  <li key={index} className="text-muted ml-4">
-                    {renderInlineMarkdown(paragraph.replace("- ", ""))}
-                  </li>
-                );
-              }
-              if (/^\d+\.\s/.test(paragraph)) {
-                return (
-                  <li key={index} className="text-muted ml-4 list-decimal">
-                    {renderInlineMarkdown(paragraph.replace(/^\d+\.\s/, ""))}
-                  </li>
-                );
-              }
-              if (paragraph.startsWith("**") && paragraph.endsWith("**")) {
-                return (
-                  <p key={index} className="font-semibold text-foreground">
-                    {paragraph.replace(/\*\*/g, "")}
-                  </p>
-                );
-              }
-              if (paragraph.trim() === "") {
-                return null;
-              }
-              return (
-                <p key={index} className="text-muted leading-relaxed mb-4">
-                  {renderInlineMarkdown(paragraph)}
-                </p>
-              );
-            })}
+              return elements;
+            })()}
           </article>
         </div>
       </section>

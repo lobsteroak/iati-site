@@ -48,38 +48,30 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-40 lg:pt-40 pb-20 lg:pb-32">
+      <section className="pt-32 lg:pt-40 pb-20 lg:pb-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="max-w-xl">
-              <AnimatedText>
-                <p className="text-sm font-medium text-muted uppercase tracking-wider mb-4">
-                  Automatização Inteligente
-                </p>
-              </AnimatedText>
-              <AnimatedText delay={0.1}>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6">
-                  Pare de gastar horas em{" "}
-                  <span className="text-muted-light">trabalho repetitivo</span>
-                </h1>
-              </AnimatedText>
-              <AnimatedText delay={0.2}>
-                <p className="text-lg lg:text-xl text-muted leading-relaxed mb-10">
-                  Identificamos os processos manuais do seu negócio e
-                  convertemos em workflows automáticos. Poupe tempo, reduza
-                  erros e deixe a sua equipa focar-se no que realmente importa.
-                </p>
-              </AnimatedText>
-              <AnimatedSection delay={0.3}>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <AnimatedButton href="/contacto" variant="primary">
-                    Agendar Reunião Gratuita
-                  </AnimatedButton>
-                  <AnimatedButton href="/calculadora" variant="outline">
-                    Calcular Poupança
-                  </AnimatedButton>
-                </div>
-              </AnimatedSection>
+              <p className="text-sm font-medium text-muted uppercase tracking-wider mb-4">
+                Automatização Inteligente
+              </p>
+              <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1] mb-6">
+                Pare de gastar horas em{" "}
+                <span className="text-muted-light">trabalho repetitivo</span>
+              </h1>
+              <p className="text-lg lg:text-xl text-muted leading-relaxed mb-10">
+                Identificamos os processos manuais do seu negócio e
+                convertemos em workflows automáticos. Poupe tempo, reduza
+                erros e deixe a sua equipa focar-se no que realmente importa.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <AnimatedButton href="/contacto" variant="primary">
+                  Agendar Reunião Gratuita
+                </AnimatedButton>
+                <AnimatedButton href="/calculadora" variant="outline">
+                  Calcular Poupança
+                </AnimatedButton>
+              </div>
             </div>
             <div className="mt-8 lg:mt-0">
               <DashboardCard />
@@ -88,8 +80,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Logo Marquee */}
-      <LogoMarquee />
+      {/* Logo Marquee - hidden until we have real clients */}
 
       {/* Capabilities Pills */}
       <section className="py-16 lg:py-20">

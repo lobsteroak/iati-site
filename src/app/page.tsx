@@ -48,7 +48,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-32 lg:pt-40 pb-20 lg:pb-32">
+      <section className="pt-40 lg:pt-40 pb-20 lg:pb-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="max-w-xl">
@@ -58,7 +58,7 @@ export default function Home() {
                 </p>
               </AnimatedText>
               <AnimatedText delay={0.1}>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6">
                   Pare de gastar horas em{" "}
                   <span className="text-muted-light">trabalho repetitivo</span>
                 </h1>

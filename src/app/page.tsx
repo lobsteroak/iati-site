@@ -53,27 +53,27 @@ export default function Home() {
         <FloatingElements />
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div className="max-w-xl">
+            <div className="text-center lg:text-left">
               <AnimatedText>
                 <p className="text-sm font-medium text-muted uppercase tracking-wider mb-4">
                   Automatização Inteligente
                 </p>
               </AnimatedText>
               <AnimatedText delay={0.1}>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6">
+                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6">
                   Pare de gastar horas em{" "}
                   <span className="text-muted-light">trabalho repetitivo</span>
                 </h1>
               </AnimatedText>
               <AnimatedText delay={0.2}>
-                <p className="text-lg lg:text-xl text-muted leading-relaxed mb-10">
+                <p className="text-base lg:text-xl text-muted leading-relaxed mb-10">
                   Identificamos os processos manuais do seu negócio e
                   convertemos em workflows automáticos. Poupe tempo, reduza
                   erros e deixe a sua equipa focar-se no que realmente importa.
                 </p>
               </AnimatedText>
               <AnimatedSection delay={0.3}>
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col sm:flex-row gap-4 items-center lg:items-start">
                   <AnimatedButton href="/contacto" variant="primary">
                     Agendar Reunião Gratuita
                   </AnimatedButton>

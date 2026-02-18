@@ -274,7 +274,7 @@ export function IATYEngineCard() {
                   stroke="rgba(75, 85, 99, 0.5)"
                   strokeWidth="1"
                 />
-                {/* IATY ENGINE text */}
+                {/* iaty ENGINE text */}
                 <motion.text
                   x="150"
                   y="135"
@@ -285,7 +285,7 @@ export function IATYEngineCard() {
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.5, duration: 0.5 }}
                 >
-                  IATY
+                  iaty
                 </motion.text>
                 <motion.text
                   x="150"

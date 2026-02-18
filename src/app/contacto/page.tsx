@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { CalEmbed } from "@/components/CalEmbed";
 
 export const metadata: Metadata = {
-  title: "Contacto | IATY - Automatização Inteligente",
+  title: "Contacto | iaty - Automatização Inteligente",
   description:
     "Agende uma reunião gratuita connosco. Vamos analisar os seus processos e mostrar como a automatização pode ajudar o seu negócio.",
 };

@@ -1,0 +1,18 @@
+{
+  "title": "Artigo de Teste",
+  "slug": "artigo-de-teste",
+  "excerpt": "Artigo de teste para validar o webhook do Arvow",
+  "content_markdown": "## Isto e um teste\n\nSe estas a ver isto o webhook esta a funcionar!",
+  "date": "2026-02-18",
+  "category": "teste",
+  "readTime": "1 min",
+  "tags": [
+    "teste"
+  ],
+  "thumbnail": null,
+  "thumbnail_alt_text": null,
+  "metadescription": "Artigo de teste para validar o webhook do Arvow",
+  "language_code": "pt",
+  "source": "arvow",
+  "id": "test-123"
+}

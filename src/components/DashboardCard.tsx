@@ -120,49 +120,38 @@ export function DashboardCard() {
             </svg>
           </div>
 
-          {/* Bottom section - Client review */}
+          {/* Bottom section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2, duration: 0.5 }}
             className="flex items-center justify-between pt-6 border-t border-gray-200"
           >
-            <div className="flex items-center gap-3">
-              {/* Avatar */}
-              <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
-                <svg className="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center">
+                <svg className="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                 </svg>
               </div>
-              <span className="text-gray-900 font-medium">Cliente</span>
-              {/* Verified badge */}
-              <svg className="w-5 h-5 text-blue-500" viewBox="0 0 24 24" fill="currentColor">
+              <span className="text-gray-900 text-sm font-medium">Cliente</span>
+              <svg className="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
               </svg>
             </div>
-
-            {/* Stars */}
-            <div className="flex items-center gap-4">
-              <div className="flex gap-1">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <motion.svg
-                    key={star}
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 1.3 + star * 0.1, duration: 0.2 }}
-                    className="w-5 h-5 text-yellow-500"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                  </motion.svg>
-                ))}
-              </div>
-
-              {/* Button */}
-              <span className="px-4 py-2 rounded-full bg-gray-900 text-white text-sm font-medium">
-                Cliente satisfeito
-              </span>
+            <div className="flex gap-1">
+              {[1, 2, 3, 4, 5].map((star) => (
+                <motion.svg
+                  key={star}
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 1.3 + star * 0.1, duration: 0.2 }}
+                  className="w-4 h-4 text-yellow-500"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                </motion.svg>
+              ))}
             </div>
           </motion.div>
         </div>

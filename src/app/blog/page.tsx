@@ -158,35 +158,6 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
-
-      {/* Newsletter */}
-      <section className="py-20 lg:py-32 bg-neutral-50">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-bold tracking-tight mb-4">
-              Fique a par das novidades
-            </h2>
-            <p className="text-muted mb-8">
-              Receba artigos e dicas sobre automatização diretamente no seu
-              email. Sem spam, prometemos.
-            </p>
-            <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="O seu email"
-                required
-                className="flex-1 px-4 py-3 rounded-full border border-border bg-white text-foreground placeholder:text-muted-light focus:outline-none focus:border-foreground transition-colors"
-              />
-              <button
-                type="submit"
-                className="px-6 py-3 bg-foreground text-white rounded-full font-medium hover:bg-foreground/90 transition-colors"
-              >
-                Subscrever
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
     </>
   );
 }

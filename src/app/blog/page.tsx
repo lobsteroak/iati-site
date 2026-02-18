@@ -57,8 +57,18 @@ export default function BlogPage() {
             {posts.map((post) => (
               <article
                 key={post.slug}
-                className="group p-8 bg-neutral-50 rounded-2xl hover:bg-neutral-100 transition-colors"
+                className="group bg-neutral-50 rounded-2xl hover:bg-neutral-100 transition-colors overflow-hidden"
               >
+                {post.thumbnail && (
+                  <Link href={`/blog/${post.slug}`}>
+                    <img
+                      src={post.thumbnail}
+                      alt={post.thumbnail_alt_text || post.title}
+                      className="w-full h-48 object-cover"
+                    />
+                  </Link>
+                )}
+                <div className="p-8">
                 <div className="flex items-center gap-3 mb-4">
                   <span className="text-xs font-medium text-muted uppercase tracking-wider">
                     {post.category}
@@ -100,6 +110,7 @@ export default function BlogPage() {
                       />
                     </svg>
                   </Link>
+                </div>
                 </div>
               </article>
             ))}

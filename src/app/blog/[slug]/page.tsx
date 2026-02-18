@@ -1,3 +1,4 @@
+import React from "react";
 import { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/Button";
@@ -27,6 +28,37 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${post.title} | iaty Blog`,
     description: post.metadescription || post.excerpt,
   };
+}
+
+function renderInlineMarkdown(text: string): React.ReactNode {
+  // Split by bold, links, and inline images
+  const parts = text.split(/(\*\*.*?\*\*|\[.*?\]\(.*?\))/g);
+  return parts.map((part, i) => {
+    // Bold
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return (
+        <strong key={i} className="font-semibold text-foreground">
+          {part.slice(2, -2)}
+        </strong>
+      );
+    }
+    // Link
+    const linkMatch = part.match(/^\[(.*?)\]\((.*?)\)$/);
+    if (linkMatch) {
+      return (
+        <a
+          key={i}
+          href={linkMatch[2]}
+          className="underline hover:text-foreground transition-colors"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {linkMatch[1]}
+        </a>
+      );
+    }
+    return part;
+  });
 }
 
 export default async function BlogPostPage({ params }: Props) {
@@ -81,6 +113,14 @@ export default async function BlogPostPage({ params }: Props) {
           <div className="text-sm text-muted">
             Publicado a {formatDate(post.date)}
           </div>
+
+          {post.thumbnail && (
+            <img
+              src={post.thumbnail}
+              alt={post.thumbnail_alt_text || post.title}
+              className="w-full h-64 md:h-80 lg:h-96 object-cover rounded-2xl mt-8"
+            />
+          )}
         </div>
       </section>
 
@@ -103,10 +143,44 @@ export default async function BlogPostPage({ params }: Props) {
                   </h3>
                 );
               }
+              if (/^!\[.*?\]\(.*?\)/.test(paragraph)) {
+                const match = paragraph.match(/^!\[(.*?)\]\((.*?)\)/);
+                if (match) {
+                  return (
+                    <img
+                      key={index}
+                      src={match[2]}
+                      alt={match[1]}
+                      className="w-full rounded-xl my-8"
+                    />
+                  );
+                }
+              }
+              if (paragraph.startsWith("> ")) {
+                return (
+                  <blockquote key={index} className="border-l-4 border-neutral-300 pl-4 my-6 italic text-muted">
+                    {paragraph.replace("> ", "")}
+                  </blockquote>
+                );
+              }
+              if (paragraph.startsWith("*   ")) {
+                return (
+                  <li key={index} className="text-muted ml-4">
+                    {renderInlineMarkdown(paragraph.replace("*   ", ""))}
+                  </li>
+                );
+              }
               if (paragraph.startsWith("- ")) {
                 return (
                   <li key={index} className="text-muted ml-4">
-                    {paragraph.replace("- ", "")}
+                    {renderInlineMarkdown(paragraph.replace("- ", ""))}
+                  </li>
+                );
+              }
+              if (/^\d+\.\s/.test(paragraph)) {
+                return (
+                  <li key={index} className="text-muted ml-4 list-decimal">
+                    {renderInlineMarkdown(paragraph.replace(/^\d+\.\s/, ""))}
                   </li>
                 );
               }
@@ -122,7 +196,7 @@ export default async function BlogPostPage({ params }: Props) {
               }
               return (
                 <p key={index} className="text-muted leading-relaxed mb-4">
-                  {paragraph}
+                  {renderInlineMarkdown(paragraph)}
                 </p>
               );
             })}

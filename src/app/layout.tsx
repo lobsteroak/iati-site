@@ -33,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt">
-      <body className={`${plusJakartaSans.variable} antialiased`}>
+      <body className={`${plusJakartaSans.variable} antialiased overflow-x-hidden`}>
         <Header />
         <main>{children}</main>
         <Footer />

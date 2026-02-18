@@ -32,7 +32,7 @@ export function DashboardCard() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.7 }}
-      className="relative w-full max-w-2xl mx-auto"
+      className="relative w-full max-w-2xl mx-auto overflow-hidden"
     >
       {/* Outer container with shadow */}
       <div className="rounded-3xl bg-gradient-to-b from-gray-200 to-gray-300 p-[1px] shadow-2xl shadow-gray-400/30">

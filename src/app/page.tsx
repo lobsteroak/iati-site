@@ -397,7 +397,7 @@ export default function Home() {
                 <AnimatedButton
                   href="/calculadora"
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-black"
+                  className="!border-white !text-white hover:!bg-white hover:!text-black"
                 >
                   Calcular Poupança
                 </AnimatedButton>

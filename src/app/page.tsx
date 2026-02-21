@@ -154,11 +154,11 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
-                Não precisa saber o que automatizar.{" "}
+                Não precisa de saber o que automatizar.{" "}
                 <span className="text-muted-light">Nós descobrimos por si.</span>
               </h2>
               <p className="text-lg text-muted leading-relaxed mb-8">
-                Ao contrário de outras soluções que esperam que você saiba
+                Ao contrário de outras soluções que esperam que saiba
                 exatamente o que quer, nós analisamos o seu negócio e
                 identificamos onde a automatização traz mais valor.
               </p>

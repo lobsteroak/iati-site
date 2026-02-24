@@ -2,12 +2,12 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #0a0a0a;
+  --foreground: #394863;
   --muted: #737373;
   --muted-light: #a3a3a3;
   --border: #e5e5e5;
   --border-dark: #d4d4d4;
-  --accent: #171717;
+  --accent: #394863;
 }
 
 @theme inline {

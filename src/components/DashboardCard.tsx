@@ -40,7 +40,7 @@ export function DashboardCard() {
         <div className="rounded-3xl bg-gradient-to-b from-white to-gray-50 p-6 lg:p-8 overflow-hidden">
           {/* Header */}
           <div className="flex items-center justify-between mb-8">
-            <span className="px-4 py-2 rounded-full bg-gray-900 text-white text-sm font-medium">
+            <span className="px-4 py-2 rounded-full bg-[#394863] text-white text-sm font-medium">
               Redução de custos
             </span>
             <span className="text-gray-500 text-sm">
@@ -55,7 +55,7 @@ export function DashboardCard() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              className="absolute top-4 left-1/3 text-gray-900 text-2xl lg:text-3xl font-bold"
+              className="absolute top-4 left-1/3 text-[#394863] text-2xl lg:text-3xl font-bold"
             >
               {value.toLocaleString('pt-PT')}€
             </motion.div>
@@ -82,8 +82,8 @@ export function DashboardCard() {
               {/* Gradient definition */}
               <defs>
                 <linearGradient id="chartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stopColor="rgba(17, 24, 39, 0.15)" />
-                  <stop offset="100%" stopColor="rgba(17, 24, 39, 0)" />
+                  <stop offset="0%" stopColor="rgba(57, 72, 99, 0.15)" />
+                  <stop offset="100%" stopColor="rgba(57, 72, 99, 0)" />
                 </linearGradient>
               </defs>
 
@@ -100,7 +100,7 @@ export function DashboardCard() {
               <motion.path
                 d="M 0 120 Q 50 110, 100 90 T 200 70 T 300 85 T 400 50"
                 fill="none"
-                stroke="rgba(17, 24, 39, 0.4)"
+                stroke="rgba(57, 72, 99, 0.4)"
                 strokeWidth="2"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
@@ -115,7 +115,7 @@ export function DashboardCard() {
               >
                 <circle cx="200" cy="70" r="12" fill="rgba(0,0,0,0.05)" />
                 <circle cx="200" cy="70" r="8" fill="white" stroke="rgba(0,0,0,0.1)" strokeWidth="1" />
-                <circle cx="200" cy="70" r="4" fill="#111827" />
+                <circle cx="200" cy="70" r="4" fill="#394863" />
               </motion.g>
             </svg>
           </div>
@@ -133,7 +133,7 @@ export function DashboardCard() {
                   <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                 </svg>
               </div>
-              <span className="text-gray-900 text-sm font-medium">Cliente</span>
+              <span className="text-[#394863] text-sm font-medium">Cliente</span>
               <svg className="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
               </svg>

@@ -36,7 +36,7 @@ export function WorkflowCard() {
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse" />
-              <span className="text-sm font-medium text-gray-900">Workflow Ativo</span>
+              <span className="text-sm font-medium text-[#394863]">Workflow Ativo</span>
             </div>
             <span className="text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
               Automático
@@ -63,9 +63,9 @@ export function WorkflowCard() {
                   <div
                     className={`w-10 h-10 rounded-xl flex items-center justify-center text-lg transition-all duration-300 ${
                       index < activeStep
-                        ? "bg-gray-900 text-white"
+                        ? "bg-[#394863] text-white"
                         : index === activeStep
-                        ? "bg-gray-900 text-white scale-110"
+                        ? "bg-[#394863] text-white scale-110"
                         : "bg-gray-200 text-gray-500"
                     }`}
                   >
@@ -82,7 +82,7 @@ export function WorkflowCard() {
                   <div className="flex-1">
                     <p
                       className={`text-sm font-medium transition-colors duration-300 ${
-                        index <= activeStep ? "text-gray-900" : "text-gray-400"
+                        index <= activeStep ? "text-[#394863]" : "text-gray-400"
                       }`}
                     >
                       {step.label}
@@ -111,7 +111,7 @@ export function WorkflowCard() {
                     </motion.div>
                   )}
                   {index === activeStep && (
-                    <div className="w-6 h-6 rounded-full border-2 border-gray-300 border-t-gray-900 animate-spin" />
+                    <div className="w-6 h-6 rounded-full border-2 border-gray-300 border-t-[#394863] animate-spin" />
                   )}
                 </motion.div>
               ))}
@@ -123,7 +123,7 @@ export function WorkflowCard() {
           <div className="mt-6 pt-4 border-t border-gray-200">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-2xl font-bold text-gray-900">847</p>
+                <p className="text-2xl font-bold text-[#394863]">847</p>
                 <p className="text-xs text-gray-500">Tarefas automatizadas hoje</p>
               </div>
               <div className="text-right">

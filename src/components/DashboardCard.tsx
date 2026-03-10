@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 export function DashboardCard() {
   const [value, setValue] = useState(0);
-  const targetValue = 80376;
+  const targetValue = 3743;
 
   useEffect(() => {
     const duration = 2000;

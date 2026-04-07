@@ -6,7 +6,7 @@ import { useEffect } from "react";
 export function CalEmbed() {
   useEffect(() => {
     (async function () {
-      const cal = await getCalApi({ namespace: "30min" });
+      const cal = await getCalApi({ namespace: "15min" });
       cal("ui", {
         hideEventTypeDetails: false,
         layout: "month_view",
@@ -16,8 +16,8 @@ export function CalEmbed() {
 
   return (
     <Cal
-      namespace="30min"
-      calLink="pedro-rothes-cngqny/30min"
+      namespace="15min"
+      calLink="pedro-rothes-cngqny/15min"
       style={{ width: "100%", height: "100%", overflow: "scroll" }}
       config={{
         layout: "month_view",
